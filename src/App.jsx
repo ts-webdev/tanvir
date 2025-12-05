@@ -1,6 +1,7 @@
 import AboutMe from "./components/AboutMe";
 import Banner from "./components/Banner";
 import Marqauee from "./components/Marqauee";
+import MySkills from "./components/MySkills";
 import Navbar from "./components/Navbar";
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
       </header>
       <main>
         <AboutMe />
+        <MySkills/>
       </main>
     </>
   );
