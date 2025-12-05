@@ -84,7 +84,7 @@ const MySkills = () => {
         {/* Heading */}
         <div className="flex justify-center items-center gap-4 text-white text-xl">
           <div className="w-40 border border-yellow-400"></div>
-          <h2>About Me</h2>
+          <h2>Skills</h2>
           <div className="w-40 border border-yellow-400"></div>
         </div>
         <p className="text-4xl font-bold text-gray-300 max-w-2xl text-center mt-5 mb-10 mx-auto">

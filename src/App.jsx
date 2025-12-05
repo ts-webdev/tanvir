@@ -3,6 +3,7 @@ import Banner from "./components/Banner";
 import Marqauee from "./components/Marqauee";
 import MySkills from "./components/MySkills";
 import Navbar from "./components/Navbar";
+import Projects from "./components/Projects";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <main>
         <AboutMe />
         <MySkills/>
+        <Projects/>
       </main>
     </>
   );
