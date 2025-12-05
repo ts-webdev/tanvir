@@ -3,11 +3,11 @@ import tanvirPhoto from "../assets/tanvir.png";
 
 const Banner = () => {
   return (
-    <div name="home" className="container mx-auto h-[70vh] text-white flex items-center justify-between">
+    <div name="home" className="container mx-auto min-h-[70vh] text-white flex items-center justify-between">
       <div>
         <div>
           <p className="text-4xl font-bold">Hello there, </p>
-          <h1 className="text-7xl mt-5 font-black">This is <span className="text-primary">Tanvir</span></h1>
+          <h1 className="text-7xl mt-5 font-black">This is <span className="text-yellow-400">Tanvir</span></h1>
           <h2 className="text-4xl font-bold mt-2">MERN Stack Developer</h2>
           <p className="mt-5 text-gray-300">
             MERN Stack Developer looking for a junior position to apply core <br />
