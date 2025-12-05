@@ -1,5 +1,6 @@
 import AboutMe from "./components/AboutMe";
 import Banner from "./components/Banner";
+import Footer from "./components/Footer";
 import Marqauee from "./components/Marqauee";
 import MySkills from "./components/MySkills";
 import Navbar from "./components/Navbar";
@@ -18,6 +19,7 @@ function App() {
         <MySkills/>
         <Projects/>
       </main>
+      <Footer/>
     </>
   );
 }

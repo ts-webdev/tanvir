@@ -90,7 +90,7 @@ const StyledWrapper = styled.div`
 
 const Projects = () => {
   return (
-    <div className="py-20 bg-linear-to-t from-[#255F38]/80 to-[#18230F]/50">
+    <div name="projects" className="pt-20 pb-40 bg-linear-to-t from-[#255F38]/80 to-[#18230F]/50">
       {/* Heading */}
       <div className="flex justify-center items-center gap-4 text-white text-xl">
         <div className="w-40 border border-yellow-400"></div>
