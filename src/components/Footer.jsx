@@ -10,9 +10,9 @@ const Footer = () => {
         <img className="w-6" src={logo} alt="" />
         <p className="mt-2 -ml-1">anvir</p>
       </Link>
-      <p className="-mt-5">MERN Stack Developer looking for a junior position to apply core <br />
+      <p className="-mt-5">MERN Stack Developer looking for a junior position to apply core <br className="hidden sm:block" />
 full-stack skills and learn industry best practices.</p>
-      <nav className="grid grid-flow-col gap-4">
+      <nav className="grid sm:grid-flow-col gap-4">
         <Link
           to="home"
           smooth={true}
@@ -86,7 +86,7 @@ full-stack skills and learn industry best practices.</p>
           </a>
         </div>
       </nav>
-      <aside>
+      <aside >
         <p>
           Copyright © {new Date().getFullYear()} - All right reserved by Tanvir
         </p>

@@ -27,7 +27,7 @@ import { TbBrandVite } from "react-icons/tb";
 
 const Marqauee = () => {
   return (
-    <div className="py-2 bg-primary flex flex-col items-center gap-5">
+    <div className="py-2  bg-primary flex flex-col items-center gap-5 mt-10">
       <Marquee autoFill={true} speed={20} direction="right">
         <div className="text-2xl">
           <LiaTicketAltSolid size={10} />

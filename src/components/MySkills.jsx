@@ -80,7 +80,7 @@ const MySkills = () => {
 
   return (
     <section name="skills" className="py-20 px-4 md:px-8 lg:px-16 bg-accent">
-      <div className="container mx-auto">
+      <div className="container mx-auto px-5">
         {/* Heading */}
         <div className="flex justify-center items-center gap-4 text-white text-xl">
           <div className="w-40 border border-yellow-400"></div>
