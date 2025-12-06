@@ -5,7 +5,6 @@ import "animate.css";
 
 const Navbar = () => {
   const [isScroll, setIsScroll] = useState(false);
-  console.log(isScroll);
 
   useEffect(() => {
     const handleScroll = () => {

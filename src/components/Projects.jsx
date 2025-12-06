@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import styled from "styled-components";
 import payConnect from "../assets/payConnect.png";
 import skillCircle from "../assets/skillCircle.png";
@@ -88,6 +88,19 @@ const StyledWrapper = styled.div`
 `;
 
 const Projects = () => {
+  const payConnectRef = useRef(null);
+  const skillCircleRef = useRef(null);
+  const momentumRef = useRef(null);
+
+  const handlaPayConnectModal = () => {
+    payConnectRef.current.showModal();
+  };
+  const handlaSikllCircleModal = () => {
+    skillCircleRef.current.showModal();
+  };
+  const handlaMomentumModal = () => {
+    momentumRef.current.showModal();
+  };
   return (
     <div
       name="projects"
@@ -104,6 +117,46 @@ const Projects = () => {
       </p>
       {/* Projects */}
       <div className="container mx-auto px-5 grid xl:grid-cols-3 md:grid-cols-2  gap-30 xl:gap-5">
+        <StyledWrapper>
+          <div className="card-container xl:h-[300px]">
+            <div className="card">
+              <div className="img-content">
+                <img className="h-full w-full" src={skillCircle} alt="" />
+              </div>
+              <div className="content">
+                <p className="heading">Skill Circle</p>
+                <p>
+                  An interactive platform where individuals can offer, learn,
+                  and trade skills within their local area. Whether it’s guitar
+                  lessons, coding help, yoga training, or language exchange —
+                  SkillCircle connects learners and providers in one
+                  community-driven platform.
+                </p>
+              </div>
+            </div>
+            <div className="flex justify-center gap-5 mt-5">
+              <a
+                href="https://github.com/ts-webdev/skill-circle"
+                target="_blank"
+                className="btn btn-outline btn-primary rounded-full"
+              >
+                Code Link
+              </a>
+              <a href="https://skill-circle-90721.web.app/" target="_blank">
+                {" "}
+                <button className="btn btn-primary text-accent rounded-full">
+                  Live Preview
+                </button>
+              </a>
+              <button
+                onClick={handlaSikllCircleModal}
+                className="hidden sm:block btn btn-primary btn-outline rounded-full"
+              >
+                View Details
+              </button>
+            </div>
+          </div>
+        </StyledWrapper>
         <StyledWrapper>
           <div className="card-container xl:h-[300px]">
             <div className="card">
@@ -126,53 +179,22 @@ const Projects = () => {
               <a
                 href="https://github.com/ts-webdev/pay-connect-client"
                 target="_blank"
-                className="btn btn-outline btn-primary"
+                className="btn btn-outline btn-primary rounded-full"
               >
                 Code Link
               </a>
               <a href="https://pay-connect-b25b0.web.app/" target="_blank">
                 {" "}
-                <button className="btn btn-primary text-accent">
+                <button className="btn btn-primary text-accent rounded-full">
                   Live Preview
                 </button>
               </a>
-              <button className="hidden sm:block btn btn-primary btn-outline">
+              <button
+                onClick={handlaPayConnectModal}
+                className="hidden sm:block btn btn-primary btn-outline rounded-full"
+              >
                 View Details
               </button>
-            </div>
-          </div>
-        </StyledWrapper>
-        <StyledWrapper>
-          <div className="card-container xl:h-[300px]">
-            <div className="card">
-              <div className="img-content">
-                <img className="h-full w-full" src={skillCircle} alt="" />
-              </div>
-              <div className="content">
-                <p className="heading">Skill Circle</p>
-                <p>
-                  An interactive platform where individuals can offer, learn,
-                  and trade skills within their local area. Whether it’s guitar
-                  lessons, coding help, yoga training, or language exchange —
-                  SkillCircle connects learners and providers in one
-                  community-driven platform.
-                </p>
-              </div>
-            </div>
-            <div className="flex justify-center gap-5 mt-5">
-              <a
-                href="https://github.com/ts-webdev/skill-circle"
-                target="_blank"
-                className="btn btn-outline btn-primary"
-              >
-                Code Link
-              </a>
-              <a href="https://skill-circle-90721.web.app/" target="_blank">
-                {" "}
-                <button className="btn btn-primary text-accent">
-                  Live Preview
-                </button>
-              </a>
             </div>
           </div>
         </StyledWrapper>
@@ -198,7 +220,7 @@ const Projects = () => {
               <a
                 href="https://github.com/ts-webdev/momentum-client"
                 target="_blank"
-                className="btn btn-outline btn-primary"
+                className="btn btn-outline btn-primary rounded-full"
               >
                 Code Link
               </a>
@@ -207,14 +229,141 @@ const Projects = () => {
                 target="_blank"
               >
                 {" "}
-                <button className="btn btn-primary text-accent">
+                <button className="btn btn-primary text-accent rounded-full">
                   Live Preview
                 </button>
               </a>
+              <button
+                onClick={handlaMomentumModal}
+                className="hidden sm:block btn btn-primary btn-outline rounded-full"
+              >
+                View Details
+              </button>
             </div>
           </div>
         </StyledWrapper>
       </div>
+      {/* Pay Conntect Modal */}
+      <dialog
+        ref={payConnectRef}
+        className="modal modal-bottom sm:modal-middle"
+      >
+        <div className="modal-box bg-accent/85 backdrop-blur-md text-white">
+          <div>
+            <img src={payConnect} alt="" />
+          </div>
+          <h3 className="font-bold text-xl mt-3">PayConnect</h3>
+          <p className="py-4 text-sm">
+            PayConnect is a full-featured Utility Bill Management System built
+            on the MERN stack, designed to make managing monthly bills simple,
+            secure, and transparent. It allows users to view, pay, update, and
+            download reports of their utility bills (Electricity, Gas, Water,
+            Internet.) — all from one responsive dashboard.
+          </p>
+          <div>
+            <h4>Technology:</h4>
+            <div>
+              <ul className="list-disc list-inside text-sm">
+                <li>React.js</li>
+                <li>Node.js</li>
+                <li>Express.js</li>
+                <li>MongoDB</li>
+                <li>JWT Authentication</li>
+                <li>DaisyUI</li>
+                <li>Firebase Authentication</li>
+                <li>Tailwind CSS</li>
+                <li>Vercel</li>
+                <li>Js PDF</li>
+                <li>Framer Motion</li>
+                <li>Lottie</li>
+              </ul>
+            </div>
+          </div>
+          <div className="modal-action">
+            <form method="dialog">
+              {/* if there is a button in form, it will close the modal */}
+              <button className="btn btn-primary text-accent rounded-full">
+                Close
+              </button>
+            </form>
+          </div>
+        </div>
+      </dialog>
+      {/* Pay Skill Circle Modal */}
+      <dialog
+        ref={skillCircleRef}
+        className="modal modal-bottom sm:modal-middle"
+      >
+        <div className="modal-box bg-accent/85 backdrop-blur-md text-white">
+          <div>
+            <img src={skillCircle} alt="" />
+          </div>
+          <h3 className="font-bold text-xl mt-3">Skill Circle</h3>
+          <p className="py-4 text-sm">
+            An interactive platform where individuals can offer, learn, and
+            trade skills within their local area. Whether it’s guitar lessons,
+            coding help, yoga training, or language exchange — SkillCircle
+            connects learners and providers in one community-driven platform.
+          </p>
+          <div>
+            <h4>Technology:</h4>
+            <div>
+              <ul className="list-disc list-inside text-sm">
+                <li>React.js</li>
+                <li>Animate.css</li>
+                <li>Swiper.js</li>
+                <li>Firebase Authentication</li>
+                <li>TailwindCSS</li>
+              </ul>
+            </div>
+          </div>
+          <div className="modal-action">
+            <form method="dialog">
+              {/* if there is a button in form, it will close the modal */}
+              <button className="btn btn-primary text-accent rounded-full">
+                Close
+              </button>
+            </form>
+          </div>
+        </div>
+      </dialog>
+      {/* Pay Skill Circle Modal */}
+      <dialog
+        ref={momentumRef}
+        className="modal modal-bottom sm:modal-middle"
+      >
+        <div className="modal-box bg-accent/85 backdrop-blur-md text-white">
+          <div>
+            <img src={momentum} alt="" />
+          </div>
+          <h3 className="font-bold text-xl mt-3">Momentum</h3>
+          <p className="py-4 text-sm">
+            Momentum is a modern, responsive wedding event management platform built with Next.js, NextAuth.js, and Express.js. Manage events, add products, and explore beautiful event listings with ease.
+          </p>
+          <div>
+            <h4>Technology:</h4>
+            <div>
+              <ul className="list-disc list-inside text-sm">
+                <li>Next.js</li>
+                <li>React.js</li>
+                <li>NextAuth.js</li>
+                <li>Express.js</li>
+                <li>MongoDB</li>
+                <li>DaisyUI</li>
+                <li>TailwindCSS</li>
+              </ul>
+            </div>
+          </div>
+          <div className="modal-action">
+            <form method="dialog">
+              {/* if there is a button in form, it will close the modal */}
+              <button className="btn btn-primary text-accent rounded-full">
+                Close
+              </button>
+            </form>
+          </div>
+        </div>
+      </dialog>
     </div>
   );
 };

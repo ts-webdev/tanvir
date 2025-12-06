@@ -95,7 +95,7 @@ const MySkills = () => {
           {skillCategories.map((category, index) => (
             <div
               key={index}
-              className="card bg-base-100/10 backdrop-blur-sm border border-white/10 hover:border-white/20 transition-all duration-300 hover:scale-[1.02]"
+              className="card bg-base-100/10 backdrop-blur-sm border border-white/10 hover:border-white/20 transition-all duration-300 hover:scale-[1.02] hover:shadow-xl hover:shadow-green-500/20"
             >
               <div className="card-body">
                 <div className="flex items-center gap-3 mb-6">
